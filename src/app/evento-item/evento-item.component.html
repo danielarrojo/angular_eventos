@@ -1,0 +1,10 @@
+<a [routerLink]="['/events',eventoHijo?.id]"><img class="card-img-top" [src]="eventoHijo?.image" alt=""></a>
+<div class="card-body">
+  <h4 class="card-title"><a [routerLink]="['/events',eventoHijo?.id]">{{eventoHijo?.title}}</a></h4>
+  <p class="card-text">{{eventoHijo?.description}}</p>
+  <button class="btn btn-danger ml-3 float-right"
+  (click)="deleteEvento()">Delete</button>
+</div>
+<div class="card-footer text-muted">
+  {{eventoHijo?.date | date:'dd/MM/y'}}<span class="float-right">{{eventoHijo?.price | currency:'EUR'}}</span>
+</div>
